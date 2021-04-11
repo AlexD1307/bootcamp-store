@@ -1,0 +1,27 @@
+<section class="store-features">
+  <div class="container store-features-block">
+    <!--    <div class="store-features-item" *ngFor="let feature of storeFeatures">-->
+    <!--      <fa-icon class="icon" [icon]="feature.icon"></fa-icon>-->
+    <!--      <div class="title-block">-->
+    <!--        <h2 class="title">{{feature.title}}</h2>-->
+    <!--        <h3 class="subtitle">{{feature.subtitle}}</h3>-->
+    <!--      </div>-->
+    <!--    </div>-->
+    <swiper
+      [slidesPerView]="4"
+      [loop]="true"
+      [autoplay]="autoplay"
+      class="h-100"
+    >
+      <ng-template swiperSlide *ngFor="let feature of storeFeatures">
+        <div class="store-features-item">
+          <fa-icon class="icon" [icon]="feature.icon"></fa-icon>
+          <div class="title-block">
+            <h2 class="title">{{feature.title}}</h2>
+            <h3 class="subtitle">{{feature.subtitle}}</h3>
+          </div>
+        </div>
+      </ng-template>
+    </swiper>
+  </div>
+</section>

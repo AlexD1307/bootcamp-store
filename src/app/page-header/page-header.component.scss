@@ -1,0 +1,36 @@
+.page-header {
+  height: 150px;
+  background: url("../../assets/page-header.png");
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  font-size: 26px;
+}
+
+.list {
+  background: inherit;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.list-item {
+  font-size: 12px;
+  margin-right: 10px;
+  color: #888888;
+  font-weight: 500;
+  &:last-child {
+    margin-right: 0;
+  }
+  &.active {
+    color: #444444;
+  }
+}
+
+.list-item-text {
+  cursor: pointer;
+}

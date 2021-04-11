@@ -1,0 +1,122 @@
+.header {
+  height: 160px;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.logo-title {
+  display: flex;
+}
+
+.logo_title-red, .logo_title-black {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.logo_title-red {
+  color: #e24545;
+
+  &:before {
+    content: "_";
+    letter-spacing: -8px;
+    position: relative;
+    bottom: -2px;
+    font-weight: bolder;
+  }
+}
+
+.logo_title-black {
+  color: #222222;
+}
+
+.logo_subtitle {
+  color: #444444;
+  position: relative;
+  bottom: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 12px;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  font-weight: bold;
+  color: #444444;
+  cursor: pointer;
+}
+
+.list-item.active {
+  color: #e24545;
+
+  &:before {
+    content: '_';
+    position: absolute;
+    bottom: 18px;
+    left: 2px;
+  }
+}
+
+.basket {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.basket-button {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 8px 14px;
+  border-color: #434343;
+}
+
+.basket-bag {
+  color: #e24545;
+  margin-right: 10px;
+}
+
+.basket-text {
+  font-size: 15px;
+  font-weight: bold;
+  color: #444444;
+}
+
+.badge-wrapper {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 8px;
+  height: 32px;
+  background-color: #fff;
+}
+
+.basket-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  background-color: #444444;
+  color: #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+}

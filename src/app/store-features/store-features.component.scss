@@ -1,0 +1,63 @@
+.store-features {
+  height: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #eee;
+}
+
+.store-features-block {
+  //display: grid;
+  //grid-template-columns: repeat(4, 1fr);
+  position: relative;
+  height: 120px;
+  border: 2px solid #434343;
+  &:after {
+    content: "";
+    top: -4px;
+    position: absolute;
+    width: 1100px;
+    height: 10px;
+    background: #fff;
+    left: calc(50% - 550px)
+  }
+}
+
+.carousel {
+  max-height: 110px;
+}
+
+.store-features-item {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  height: 116px;
+}
+
+.icon {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.icon-truck {
+  transform: rotateY(180deg);
+}
+
+.title-block {
+  position: relative;
+  &:after {
+    content: "_";
+    position: absolute;
+    bottom: -16px;
+  }
+}
+
+.title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 12px;
+  color: #444444;
+}

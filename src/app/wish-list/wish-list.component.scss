@@ -1,0 +1,157 @@
+.btn-clear-list {
+  position: absolute;
+  right: 0;
+  font-size: 12px;
+  font-weight: 500;
+  background: none;
+  border: 2px solid #434343;
+  padding: 8px 16px;
+  transition: 0.2s;
+  &:disabled {
+    border-color: #ccc;
+  }
+
+  &:enabled:hover {
+    color: #fff;
+    background-color: #e24545;
+    border: 2px solid #e24545;
+  }
+}
+
+.list-filter {
+  height: 130px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.list-input {
+  width: 300px;
+  border-color: #444444;
+  border-width: 0 0 2px;
+  outline: none;
+  padding: 0 2px;
+}
+
+.wish-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-row-gap: 50px;
+  grid-column-gap: 30px;
+}
+
+.wish-list-card {
+  border: 1px solid #ededed;
+}
+
+.card-image-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 265px;
+  position: relative;
+
+  &:after {
+    content: '_';
+    color: #e24545;
+    position: absolute;
+    bottom: 0;
+    font-weight: bolder;
+  }
+
+  &:hover .card-remove {
+    display: flex;
+  }
+}
+
+.card-image {
+  max-height: 265px;
+}
+
+.card-remove {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(49, 49, 49, 0.5);
+}
+
+.card-remove-btn {
+  font-size: 12px;
+  font-weight: bold;
+  color: #ffffff;
+  background: none;
+  border: 2px solid #ffffff;
+  padding: 8px 10px;
+}
+
+.card-title, .card-subtitle {
+  font-weight: bolder;
+}
+
+.card-title {
+  font-size: 14px;
+}
+
+.card-subtitle {
+  color: #e24545;
+  font-size: 16px;
+}
+
+.wish-card-footer {
+  display: flex;
+  justify-content: center;
+}
+
+.card-btn {
+  padding: 8px 14px;
+  background: none;
+  border: 1px solid #ededed;
+  transition: background 0.2s;
+  &:hover {
+    background: #e24545;
+  }
+
+  &:hover .card-btn-icon {
+    color: #fff;
+  }
+}
+
+.card-btn-icon {
+  color: #444444;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  margin-bottom: 110px;
+}
+
+.page {
+  margin-right: 8px;
+}
+
+.btn-page {
+  padding: 6px 12px;
+  background: none;
+  font-size: 12px;
+  color: #888888;
+  border: 2px solid #dddddd;
+  transition: 0.15s;
+
+  &.active, &:hover {
+    color: #e24545;
+    border-color: #434343;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
