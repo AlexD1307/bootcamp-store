@@ -2,12 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import StoreFeatures from './store-features';
 import { StoreFeatureInterface } from 'src/app/types/store-feature';
 import { SwiperOptions } from 'swiper/types';
-import SwiperCore, {
-  Navigation,
-  Pagination,
-  Scrollbar,
-  A11y, Autoplay,
-} from 'swiper/core';
+import SwiperCore, { Autoplay } from 'swiper/core';
 
 SwiperCore.use([Autoplay]);
 
