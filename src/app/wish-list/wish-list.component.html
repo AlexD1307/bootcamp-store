@@ -6,22 +6,31 @@
       class="list-input"
       type="text"
       placeholder="Apple"
+    />
+    <button
+      [disabled]="!wishListInputValue"
+      (click)="clearFilter()"
+      class="btn-clear-list"
     >
-    <button [disabled]="!wishListInputValue" (click)="clearFilter()" class="btn-clear-list">
       CLEAR LIST
     </button>
   </div>
   <div class="wish-list">
     <div class="wish-list-card" *ngFor="let wishListItem of wishListView">
       <div class="card-image-wrapper">
-        <img class="card-image" [src]="wishListItem.imgSrc" alt="wish item">
+        <img class="card-image" [src]="wishListItem.imgSrc" alt="wish item" />
         <div class="card-remove">
-          <button class="card-remove-btn" (click)="removeWishItem(wishListItem.id)">REMOVE FROM LIST</button>
+          <button
+            class="card-remove-btn"
+            (click)="removeWishItem(wishListItem.id)"
+          >
+            REMOVE FROM LIST
+          </button>
         </div>
       </div>
       <div class="card-body text-center">
-        <h2 class="card-title">{{wishListItem.name}}</h2>
-        <h3 class="card-subtitle">${{wishListItem.price}}.00</h3>
+        <h2 class="card-title">{{ wishListItem.name }}</h2>
+        <h3 class="card-subtitle">${{ wishListItem.price }}.00</h3>
       </div>
       <div class="wish-card-footer">
         <button class="card-btn" (click)="removeWishItem(wishListItem.id)">
@@ -35,7 +44,14 @@
   </div>
   <ul class="pagination">
     <li class="page" *ngFor="let page of pages">
-      <button (click)="goToPage(page)" class="btn-page" [ngClass]="{active: currentPage === page}">{{page}}</button>
+      <button
+        (click)="goToPage(page)"
+        class="btn-page"
+        [ngClass]="{ active: currentPage === page }"
+        [disabled]="currentPage === page"
+      >
+        {{ page }}
+      </button>
     </li>
   </ul>
 </section>
